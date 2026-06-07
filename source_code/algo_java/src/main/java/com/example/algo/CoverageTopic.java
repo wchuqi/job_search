@@ -1,0 +1,63 @@
+package com.example.algo;
+
+/**
+ * 从 `算法` 目录所有学习文档中抽取出的知识点主题。
+ *
+ * <p>测试运行器会检查这里的每个枚举值是否都被测试命中过。这样能直接回答：
+ * “文档里的知识点有没有对应源码和测试”。</p>
+ *
+ * <p>注意：这是知识点覆盖，不是 JaCoCo 那种字节码行覆盖。</p>
+ */
+public enum CoverageTopic {
+    PROBLEM_SOLVING_FLOW,
+    COMPLEXITY_ANALYSIS,
+    DATA_STRUCTURE_CHOICE,
+    JAVA21_TEMPLATES,
+    PYTHON_TEMPLATE_AWARENESS,
+    ARRAYS_STRINGS,
+    TWO_POINTERS,
+    SLIDING_WINDOW,
+    HASH_TABLE,
+    PREFIX_SUM,
+    DIFFERENCE_ARRAY,
+    STACK,
+    QUEUE_DEQUE,
+    MONOTONIC_STRUCTURE,
+    HEAP,
+    BINARY_SEARCH,
+    BINARY_ANSWER,
+    SORTING,
+    QUICK_SELECT,
+    LINKED_LIST,
+    TREE_TRAVERSAL,
+    GRAPH_TRAVERSAL,
+    DFS,
+    BFS,
+    BACKTRACKING,
+    DYNAMIC_PROGRAMMING,
+    ONE_DIMENSION_DP,
+    TWO_DIMENSION_DP,
+    KNAPSACK_DP,
+    SUBSEQUENCE_DP,
+    INTERVAL_DP,
+    TREE_DP,
+    STATE_COMPRESSION,
+    GREEDY,
+    UNION_FIND,
+    TOPOLOGICAL_SORT,
+    SHORTEST_PATH,
+    MINIMUM_SPANNING_TREE,
+    BIT_OPERATION,
+    MATH,
+    RANDOMIZATION,
+    TRIE,
+    FENWICK_TREE,
+    SEGMENT_TREE,
+    LRU_CACHE,
+    RANDOMIZED_SET,
+    LEETCODE_CLASSICS,
+    INTERVIEW_EXPLANATION,
+    REVIEW_AND_ACCEPTANCE,
+    EDGE_CASES,
+    OVERFLOW_HANDLING
+}

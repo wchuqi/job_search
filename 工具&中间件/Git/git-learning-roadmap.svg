@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2400" viewBox="0 0 1600 2400" role="img" aria-labelledby="title desc">
+  <title id="title">Git 完整学习路线图</title>
+  <desc id="desc">覆盖 Git 基础、分支、远程、撤销、变基、标签、排障、内部模型、安全治理和大型仓库维护的完整学习路线图。</desc>
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#15345b"/>
+      <stop offset="50%" stop-color="#216b76"/>
+      <stop offset="100%" stop-color="#2a7a52"/>
+    </linearGradient>
+    <linearGradient id="track" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2d6cdf"/>
+      <stop offset="28%" stop-color="#1d9a8a"/>
+      <stop offset="56%" stop-color="#d48a19"/>
+      <stop offset="100%" stop-color="#b84a62"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1f2937" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .bg { fill: #f6f8fb; }
+      .hero { fill: url(#hero); }
+      .title { font: 800 62px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #fff; letter-spacing: 0; }
+      .subtitle { font: 400 25px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #dbeafe; letter-spacing: 0; }
+      .note { font: 500 22px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #eef6ff; letter-spacing: 0; }
+      .track { stroke: url(#track); stroke-width: 16; stroke-linecap: round; fill: none; }
+      .connector { stroke: #aab7c6; stroke-width: 4; stroke-dasharray: 8 9; fill: none; }
+      .card { fill: #fff; stroke: #d9e2ec; stroke-width: 2; rx: 16; filter: url(#shadow); }
+      .kicker { font: 700 18px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #526173; letter-spacing: 0; }
+      .stage-title { font: 800 29px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #172033; letter-spacing: 0; }
+      .body { font: 400 21px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #243447; letter-spacing: 0; }
+      .small { font: 400 18px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #405468; letter-spacing: 0; }
+      .chip { fill: #edf4ff; stroke: #c8daf5; stroke-width: 1; rx: 14; }
+      .chip2 { fill: #eefaf6; stroke: #bfe8dd; stroke-width: 1; rx: 14; }
+      .chip3 { fill: #fff4df; stroke: #f0d39a; stroke-width: 1; rx: 14; }
+      .chip4 { fill: #fff0f3; stroke: #ecc2cc; stroke-width: 1; rx: 14; }
+      .chip-text { font: 700 17px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #24445f; letter-spacing: 0; }
+      .node { stroke: #fff; stroke-width: 8; }
+      .node-text { font: 800 28px Arial, sans-serif; fill: #fff; text-anchor: middle; dominant-baseline: central; letter-spacing: 0; }
+      .footer { fill: #fff; stroke: #d9e2ec; stroke-width: 2; rx: 16; filter: url(#shadow); }
+      .footer-title { font: 800 29px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #172033; letter-spacing: 0; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="2400"/>
+  <rect class="hero" width="1600" height="260"/>
+  <text class="title" x="100" y="96">Git 完整学习路线图</text>
+  <text class="subtitle" x="102" y="145">从日常命令到对象模型、协作治理、安全排障和大型仓库维护</text>
+  <text class="note" x="102" y="195">路线图之外，详细资料按知识点拆分，并提供完整知识点清单和面试问答。</text>
+
+  <path class="track" d="M800 330 L800 1940"/>
+
+  <path class="connector" d="M800 350 H710"/>
+  <rect class="card" x="100" y="300" width="610" height="150"/>
+  <text class="kicker" x="130" y="335">阶段 1</text>
+  <text class="stage-title" x="130" y="372">版本控制和本地提交</text>
+  <text class="body" x="130" y="410">工作区、暂存区、本地仓库、提交历史。</text>
+  <rect class="chip" x="130" y="426" width="92" height="32"/><text class="chip-text" x="146" y="448">init</text>
+  <rect class="chip" x="232" y="426" width="104" height="32"/><text class="chip-text" x="248" y="448">status</text>
+  <rect class="chip" x="346" y="426" width="90" height="32"/><text class="chip-text" x="362" y="448">add</text>
+  <rect class="chip" x="446" y="426" width="112" height="32"/><text class="chip-text" x="462" y="448">commit</text>
+  <circle class="node" cx="800" cy="350" r="36" fill="#2d6cdf"/><text class="node-text" x="800" y="350">1</text>
+
+  <path class="connector" d="M800 525 H890"/>
+  <rect class="card" x="890" y="475" width="610" height="150"/>
+  <text class="kicker" x="920" y="510">阶段 2</text>
+  <text class="stage-title" x="920" y="547">分支、合并和冲突</text>
+  <text class="body" x="920" y="585">分支指针、快进合并、三方合并、冲突解决。</text>
+  <rect class="chip2" x="920" y="601" width="110" height="32"/><text class="chip-text" x="936" y="623">branch</text>
+  <rect class="chip2" x="1040" y="601" width="108" height="32"/><text class="chip-text" x="1056" y="623">switch</text>
+  <rect class="chip2" x="1158" y="601" width="100" height="32"/><text class="chip-text" x="1174" y="623">merge</text>
+  <circle class="node" cx="800" cy="525" r="36" fill="#1d7fbf"/><text class="node-text" x="800" y="525">2</text>
+
+  <path class="connector" d="M800 700 H710"/>
+  <rect class="card" x="100" y="650" width="610" height="150"/>
+  <text class="kicker" x="130" y="685">阶段 3</text>
+  <text class="stage-title" x="130" y="722">远程仓库协作</text>
+  <text class="body" x="130" y="760">clone、fetch、pull、push、PR/MR、远程追踪。</text>
+  <rect class="chip2" x="130" y="776" width="94" height="32"/><text class="chip-text" x="146" y="798">clone</text>
+  <rect class="chip2" x="234" y="776" width="88" height="32"/><text class="chip-text" x="250" y="798">fetch</text>
+  <rect class="chip2" x="332" y="776" width="78" height="32"/><text class="chip-text" x="348" y="798">pull</text>
+  <rect class="chip2" x="420" y="776" width="82" height="32"/><text class="chip-text" x="436" y="798">push</text>
+  <circle class="node" cx="800" cy="700" r="36" fill="#1d9a8a"/><text class="node-text" x="800" y="700">3</text>
+
+  <path class="connector" d="M800 875 H890"/>
+  <rect class="card" x="890" y="825" width="610" height="150"/>
+  <text class="kicker" x="920" y="860">阶段 4</text>
+  <text class="stage-title" x="920" y="897">回退、撤销和恢复</text>
+  <text class="body" x="920" y="935">restore、reset、revert、reflog、clean 风险。</text>
+  <rect class="chip3" x="920" y="951" width="112" height="32"/><text class="chip-text" x="936" y="973">restore</text>
+  <rect class="chip3" x="1042" y="951" width="96" height="32"/><text class="chip-text" x="1058" y="973">reset</text>
+  <rect class="chip3" x="1148" y="951" width="96" height="32"/><text class="chip-text" x="1164" y="973">revert</text>
+  <circle class="node" cx="800" cy="875" r="36" fill="#60a561"/><text class="node-text" x="800" y="875">4</text>
+
+  <path class="connector" d="M800 1050 H710"/>
+  <rect class="card" x="100" y="1000" width="610" height="150"/>
+  <text class="kicker" x="130" y="1035">阶段 5</text>
+  <text class="stage-title" x="130" y="1072">变基和历史整理</text>
+  <text class="body" x="130" y="1110">merge / rebase 差异、交互式 rebase、强推边界。</text>
+  <rect class="chip3" x="130" y="1126" width="110" height="32"/><text class="chip-text" x="146" y="1148">rebase</text>
+  <rect class="chip3" x="250" y="1126" width="128" height="32"/><text class="chip-text" x="266" y="1148">rebase -i</text>
+  <circle class="node" cx="800" cy="1050" r="36" fill="#d48a19"/><text class="node-text" x="800" y="1050">5</text>
+
+  <path class="connector" d="M800 1225 H890"/>
+  <rect class="card" x="890" y="1175" width="610" height="150"/>
+  <text class="kicker" x="920" y="1210">阶段 6</text>
+  <text class="stage-title" x="920" y="1247">标签、忽略和配置</text>
+  <text class="body" x="920" y="1285">tag、.gitignore、.gitattributes、配置层级。</text>
+  <rect class="chip4" x="920" y="1301" width="72" height="32"/><text class="chip-text" x="936" y="1323">tag</text>
+  <rect class="chip4" x="1002" y="1301" width="116" height="32"/><text class="chip-text" x="1018" y="1323">ignore</text>
+  <rect class="chip4" x="1128" y="1301" width="98" height="32"/><text class="chip-text" x="1144" y="1323">config</text>
+  <circle class="node" cx="800" cy="1225" r="36" fill="#ca6f32"/><text class="node-text" x="800" y="1225">6</text>
+
+  <path class="connector" d="M800 1400 H710"/>
+  <rect class="card" x="100" y="1350" width="610" height="150"/>
+  <text class="kicker" x="130" y="1385">阶段 7</text>
+  <text class="stage-title" x="130" y="1422">排障和高级工具</text>
+  <text class="body" x="130" y="1460">stash、cherry-pick、bisect、blame、历史搜索。</text>
+  <rect class="chip4" x="130" y="1476" width="96" height="32"/><text class="chip-text" x="146" y="1498">stash</text>
+  <rect class="chip4" x="236" y="1476" width="130" height="32"/><text class="chip-text" x="252" y="1498">bisect</text>
+  <rect class="chip4" x="376" y="1476" width="92" height="32"/><text class="chip-text" x="392" y="1498">blame</text>
+  <circle class="node" cx="800" cy="1400" r="36" fill="#b84a62"/><text class="node-text" x="800" y="1400">7</text>
+
+  <path class="connector" d="M800 1575 H890"/>
+  <rect class="card" x="890" y="1525" width="610" height="150"/>
+  <text class="kicker" x="920" y="1560">阶段 8</text>
+  <text class="stage-title" x="920" y="1597">对象模型和引用系统</text>
+  <text class="body" x="920" y="1635">blob、tree、commit、tag、HEAD、版本选择器。</text>
+  <rect class="chip" x="920" y="1651" width="92" height="32"/><text class="chip-text" x="936" y="1673">object</text>
+  <rect class="chip" x="1022" y="1651" width="90" height="32"/><text class="chip-text" x="1038" y="1673">refs</text>
+  <rect class="chip" x="1122" y="1651" width="118" height="32"/><text class="chip-text" x="1138" y="1673">rev-parse</text>
+  <circle class="node" cx="800" cy="1575" r="36" fill="#7c5cc4"/><text class="node-text" x="800" y="1575">8</text>
+
+  <path class="connector" d="M800 1750 H710"/>
+  <rect class="card" x="100" y="1700" width="610" height="150"/>
+  <text class="kicker" x="130" y="1735">阶段 9</text>
+  <text class="stage-title" x="130" y="1772">文件规则、安全和治理</text>
+  <text class="body" x="130" y="1810">属性、hooks、签名、敏感信息、保护分支。</text>
+  <rect class="chip2" x="130" y="1826" width="118" height="32"/><text class="chip-text" x="146" y="1848">attributes</text>
+  <rect class="chip2" x="258" y="1826" width="84" height="32"/><text class="chip-text" x="274" y="1848">hooks</text>
+  <rect class="chip2" x="352" y="1826" width="88" height="32"/><text class="chip-text" x="368" y="1848">sign</text>
+  <circle class="node" cx="800" cy="1750" r="36" fill="#2f8f68"/><text class="node-text" x="800" y="1750">9</text>
+
+  <path class="connector" d="M800 1925 H890"/>
+  <rect class="card" x="890" y="1875" width="610" height="150"/>
+  <text class="kicker" x="920" y="1910">阶段 10</text>
+  <text class="stage-title" x="920" y="1947">大型仓库和维护</text>
+  <text class="body" x="920" y="1985">LFS、submodule、worktree、sparse、gc、fsck。</text>
+  <rect class="chip3" x="920" y="2001" width="70" height="32"/><text class="chip-text" x="936" y="2023">LFS</text>
+  <rect class="chip3" x="1000" y="2001" width="128" height="32"/><text class="chip-text" x="1016" y="2023">worktree</text>
+  <rect class="chip3" x="1138" y="2001" width="70" height="32"/><text class="chip-text" x="1154" y="2023">gc</text>
+  <circle class="node" cx="800" cy="1925" r="36" fill="#9b4b64"/><text class="node-text" x="800" y="1925">10</text>
+
+  <rect class="footer" x="100" y="2120" width="1400" height="170"/>
+  <text class="footer-title" x="135" y="2170">完整性检查</text>
+  <text class="body" x="135" y="2210">先用 14-Git完整知识点清单 检查覆盖，再按 15-22 补齐内部原理、高级协作、安全和大型仓库专题。</text>
+  <text class="small" x="135" y="2250">最终能力：会用命令、能解释机制、能处理误操作、能参与团队协作、能治理安全和大型仓库风险。</text>
+</svg>

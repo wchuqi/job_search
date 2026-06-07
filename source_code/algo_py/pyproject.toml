@@ -1,0 +1,5 @@
+[project]
+name = "algo-py"
+version = "1.0.0"
+description = "Python 3.14 algorithm examples generated from the algorithm study docs."
+requires-python = ">=3.14"

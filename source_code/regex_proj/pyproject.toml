@@ -1,0 +1,19 @@
+[project]
+name = "regex-proj"
+version = "0.1.0"
+description = "Regex knowledge demos and tests mapped from the study documents."
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["src/regex_proj"]
+
+[tool.coverage.report]
+fail_under = 100
+show_missing = true
+skip_covered = false

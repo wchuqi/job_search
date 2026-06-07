@@ -1,0 +1,2 @@
+com.javastudy.reflection.UppercaseCommand
+com.javastudy.reflection.ReverseCommand

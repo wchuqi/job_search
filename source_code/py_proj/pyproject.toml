@@ -1,0 +1,23 @@
+[project]
+name = "py_proj"
+version = "0.1.0"
+description = "Python knowledge points reference project"
+requires-python = ">=3.14"
+dependencies = ["regex"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov>=5.0"]
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--tb=short"
+markers = [
+    "slow: marks tests that exercise slower examples such as process pools",
+]
